@@ -1,6 +1,5 @@
-import "./App.css";
-import Landing from "./components/Landing";
-import Home from "./components/Home.jsx";
+import Landing from "./pages/Landing";
+import Home from "./pages/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
