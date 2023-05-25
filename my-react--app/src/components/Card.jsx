@@ -21,7 +21,6 @@ const Card = ({ products }) => {
                 </p>
                 <ul>
                   <li>{product.categories}</li>
-                  <li>{product.details}</li>
                 </ul>
               </div>
               <span className="precio">AR${product.price}</span>

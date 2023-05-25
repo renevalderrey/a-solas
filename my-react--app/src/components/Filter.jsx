@@ -15,14 +15,15 @@ const Filter = ({ filterCategory, filterSubcategory }) => {
   return (
     <div className="menu-wrap">
       <input type="checkbox" className="toggler" />
-      <div className="hamburger"></div>
+      <div className="hamburger"><div></div></div>
       <div className="menu">
         <div>
           <div>
             <ul>
-              <li>
-                <h1>A Solas - Sex Shop</h1>
-              </li>
+            <li>
+                  <h1 className="title">a solas</h1>
+                  <h2 className="subtitle">Sexshop</h2>
+                </li>
               <li>
                 {sinSubcategory.map((category) => (
                   <>
