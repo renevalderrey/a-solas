@@ -4,7 +4,7 @@ import axios from "axios";
 export const getProducts = () => {
   return async function (dispatch) {
     try {
-      const res = await axios.get("/");
+      const res = await axios.get("https://a-solas-pky3-dev.fl0.io/");
       return dispatch({ type: "GET_PRODUCTS", payload: res.data });
     } catch (error) {
       return { message: error.message };
@@ -16,7 +16,7 @@ export const getProducts = () => {
 export const postProducts = (data) => {
   return async function (dispatch) {
     try {
-      const res = await axios.post("/", data);
+      const res = await axios.post("https://a-solas-pky3-dev.fl0.io/", data);
       return dispatch({ type: "POST_PRODUCTS", payload: res.data });
     } catch (error) {
       return { message: error.message };
@@ -28,7 +28,7 @@ export const postProducts = (data) => {
 export const putProduct = (id, data) => {
   return async function (dispatch) {
     try {
-      const res = await axios.put(`/${id}`, data);
+      const res = await axios.put(`https://a-solas-pky3-dev.fl0.io/${id}`, data);
       return dispatch({ type: "PUT_PRODUCT", payload: res.data });
     } catch (error) {
       return { message: error.message };
@@ -40,7 +40,7 @@ export const putProduct = (id, data) => {
 export const deleteProducts = (id) => {
   return async function (dispatch) {
     try {
-      const res = await axios.delete(`/${id}`);
+      const res = await axios.delete(`https://a-solas-pky3-dev.fl0.io/${id}`);
       return dispatch({ type: "DELETE_PRODUCTS", payload });
     } catch (error) {
       return { error: error.message };
