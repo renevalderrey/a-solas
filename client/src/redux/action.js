@@ -5,8 +5,10 @@ export const getProducts = () => {
   return async function (dispatch) {
     try {
       const res = await axios.get("https://a-solas-pky3-dev.fl0.io/");
+      console.log(res)
       return dispatch({ type: "GET_PRODUCTS", payload: res.data });
     } catch (error) {
+      console.log(error)
       return { message: error.message };
     }
   };
@@ -17,8 +19,10 @@ export const postProducts = (data) => {
   return async function (dispatch) {
     try {
       const res = await axios.post("https://a-solas-pky3-dev.fl0.io/", data);
+      console.log(res)
       return dispatch({ type: "POST_PRODUCTS", payload: res.data });
     } catch (error) {
+      console.log(error)
       return { message: error.message };
     }
   };
@@ -29,8 +33,10 @@ export const putProduct = (id, data) => {
   return async function (dispatch) {
     try {
       const res = await axios.put(`https://a-solas-pky3-dev.fl0.io/${id}`, data);
+      console.log(res)
       return dispatch({ type: "PUT_PRODUCT", payload: res.data });
     } catch (error) {
+      console.log(error)
       return { message: error.message };
     }
   };
@@ -41,8 +47,10 @@ export const deleteProducts = (id) => {
   return async function (dispatch) {
     try {
       const res = await axios.delete(`https://a-solas-pky3-dev.fl0.io/${id}`);
+      console.log(res)
       return dispatch({ type: "DELETE_PRODUCTS", payload });
     } catch (error) {
+      console.log(error)
       return { error: error.message };
     }
   };
