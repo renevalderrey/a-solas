@@ -4,9 +4,28 @@ import { Provider } from "react-redux";
 import store, { saveState } from "./redux/store.js";
 import App from "./App.jsx";
 import axios from "axios";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Landing from "./pages/Landing.jsx";
+import Admin from "./pages/Admin.jsx";
 
 // axios.defaults.baseURL = "http://localhost:3000";
-axios.defaults.baseURL = "https://a-solas-pky3-dev.fl0.io"
+axios.defaults.baseURL = "https://a-solas-pky3-dev.fl0.io";
+
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Landing />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,7 +37,7 @@ const Root = () => {
 
   return (
     <Provider store={store}>
-      <App />
+      <RouterProvider router={router} />
     </Provider>
   );
 };
