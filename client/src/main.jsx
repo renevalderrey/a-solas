@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import store, { saveState } from "./redux/store.js";
-import App from "./App.jsx";
 import axios from "axios";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
